@@ -169,6 +169,10 @@ AI 启动时会**自动**扫描并整合这些文档。
 sdd-scaffold/
 ├── README.md                    # 本文档（唯一入口）
 ├── olddocs/                     # ⭐ 历史文档目录
+├── docs/
+│   ├── commands/                # ⭐ Claude Code 命令
+│   │   ├── README.md
+│   │   └── sdd-starter.md
 │   ├── README.md             # 迁移说明
 │   ├── 需求文档/
 │   ├── 技术设计/
