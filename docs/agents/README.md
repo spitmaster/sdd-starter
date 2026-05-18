@@ -52,6 +52,37 @@
 
 ---
 
+## 通用领域 Agents(跨项目复用)
+
+这些 agent 定义的是**领域能力**,不绑定具体项目。被具体项目调用时,通过该项目的 orchestrator + overview 注入项目特定的契约/schema。
+
+| Agent | 能力 |
+| ----- | ---- |
+| [static-code-analyzer](./static-code-analyzer.md) | 静态代码分析:AST、符号表、调用图、框架识别 |
+| [io-entry-mapper](./io-entry-mapper.md) | IO 入口识别:HTTP / 前端事件 / CLI / 队列 / cron |
+| [dataflow-tracer](./dataflow-tracer.md) | 单入口数据流追踪(含 ORM / 跨进程边) |
+| [business-translator](./business-translator.md) | 代码到中文业务语言的 LLM 翻译(evidence + 置信度) |
+| [3d-rendering-engineer](./3d-rendering-engineer.md) | Three.js / R3F 3D 场景渲染与流水动画 |
+| [3d-interaction-designer](./3d-interaction-designer.md) | 3D 空间内的导航、聚焦、防迷路 UX |
+| [fixture-validator](./fixture-validator.md) | 测试夹具构建 + 端到端准确性回归 |
+
+---
+
+## 项目专属 Agents
+
+每个具体项目只写**自己的 orchestrator + overview**,复用上面的通用 agent。
+
+### 代码可视化阅读器(codeviz)
+
+读取源码库生成 3D 业务流水视图,辅助程序员快速理解大型项目。
+
+| 文档 | 说明 |
+| ---- | ---- |
+| [codeviz-overview.md](./codeviz-overview.md) | 项目层文档:agent 角色映射、中间表示 schema、红线、里程碑路径 |
+| [codeviz-orchestrator.md](./codeviz-orchestrator.md) | 项目主调度:任务拆解、契约对齐、全局联调 |
+
+---
+
 ## Agent 模板
 
 ```markdown
