@@ -246,13 +246,16 @@ AI：
 
 ```bash
 # 初始化 SDD 脚手架
-/sdd-init
+/sdd-starter:init
 
 # 更新 SDD 脚手架
-/sdd-update
+/sdd-starter:update
+
+# 升级插件（拉取最新代码）
+/sdd-starter:upgrade
 
 # 检查脚手架状态
-/sdd-check
+/sdd-starter:check
 
 # 查看 SPEC
 /read SPEC.md

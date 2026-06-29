@@ -119,13 +119,16 @@ AI 启动时会**自动**扫描并整合这些文档。
 /plugin install sdd-starter
 
 # 2. 初始化脚手架
-/plugin run sdd-starter/sdd-init
+/sdd-starter:init
 
 # 3. 更新脚手架（后续）
-/plugin run sdd-starter/sdd-update
+/sdd-starter:update
 
-# 4. 检查状态
-/plugin run sdd-starter/sdd-check
+# 4. 升级插件（拉取最新代码）
+/sdd-starter:upgrade
+
+# 5. 检查状态
+/sdd-starter:check
 ```
 
 ### 方式 2: 手动复制

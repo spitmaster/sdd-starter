@@ -1,4 +1,4 @@
-# sdd-check - 检查 SDD 脚手架状态
+# sdd-starter:check - 检查 SDD 脚手架状态
 
 > 检查当前目录的 SDD 脚手架状态，显示版本和配置信息
 
@@ -143,7 +143,7 @@ echo ""
 
 # TODO: 实现远程版本检查
 echo "⚠️  更新检查功能待实现"
-echo "   建议定期运行 /sdd-update 更新脚手架"
+echo "   建议定期运行 /sdd-starter:update 更新脚手架"
 echo ""
 ```
 
@@ -177,9 +177,9 @@ echo ""
 
 echo "建议操作："
 if [ ! -d "docs/" ]; then
-  echo "  1. 运行 /sdd-init 初始化脚手架"
+  echo "  1. 运行 /sdd-starter:init 初始化脚手架"
 elif [ $score -lt $total ]; then
-  echo "  1. 运行 /sdd-update 更新脚手架"
+  echo "  1. 运行 /sdd-starter:update 更新脚手架"
 else
   echo "  1. 开始使用 SDD 工作流程开发"
 fi
@@ -192,7 +192,7 @@ echo ""
 
 ```bash
 # 检查当前项目的 SDD 脚手架状态
-/sdd-check
+/sdd-starter:check
 
 # 输出示例：
 # === SDD 脚手架状态检查 ===

@@ -1,4 +1,4 @@
-# sdd-init - 初始化 SDD 脚手架
+# sdd-starter:init - 初始化 SDD 脚手架
 
 > 在当前目录初始化 SDD (Specification-Driven Development) 脚手架
 
@@ -29,7 +29,7 @@ git rev-parse --git-dir 2>/dev/null
 ```
 
 **处理逻辑**：
-- 如果已有 SDD 结构 → 提示用户使用 `/sdd-update` 命令更新
+- 如果已有 SDD 结构 → 提示用户使用 `/sdd-starter:update` 命令更新
 - 如果是 Git 仓库 → 正常初始化，文件会加入版本控制
 - 如果不是 Git 仓库 → 询问用户是否要初始化 Git
 
@@ -100,11 +100,11 @@ echo "  - docs/04-AI工具指南.md - AI 工具使用"
 ```bash
 # 在新项目中初始化 SDD 脚手架
 cd my-new-project
-/plugin run sdd-starter/sdd-init
+/sdd-starter:init
 
 # 或者在已有项目中初始化
 cd existing-project
-/plugin run sdd-starter/sdd-init
+/sdd-starter:init
 ```
 
 ---

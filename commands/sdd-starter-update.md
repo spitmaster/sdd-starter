@@ -1,4 +1,4 @@
-# sdd-update - 更新 SDD 脚手架
+# sdd-starter:update - 更新 SDD 脚手架
 
 > 更新当前目录的 SDD 脚手架到最新版本
 
@@ -24,7 +24,7 @@
 [ -f "CODEBUDDY.md" ] || [ -f "AGENTS.md" ] || [ -d "docs/" ]
 if [ $? -ne 0 ]; then
   echo "错误：当前目录不是 SDD 项目"
-  echo "请先运行 /sdd-init 初始化脚手架"
+  echo "请先运行 /sdd-starter:init 初始化脚手架"
   exit 1
 fi
 
@@ -150,10 +150,10 @@ echo "  cp $BACKUP_DIR/* ./"
 
 ```bash
 # 更新当前项目的 SDD 脚手架
-/sdd-update
+/sdd-starter:update
 
 # 或者指定版本更新（TODO）
-/sdd-update --version 1.1.0
+/sdd-starter:update --version 1.1.0
 ```
 
 ---

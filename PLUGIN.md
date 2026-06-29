@@ -8,10 +8,11 @@
 
 `sdd-starter` 插件提供以下功能：
 
-1. **初始化脚手架** (`/sdd-init`) - 在当前目录初始化 SDD 脚手架
-2. **更新脚手架** (`/sdd-update`) - 更新当前目录的 SDD 脚手架到最新版本
-3. **检查状态** (`/sdd-check`) - 检查当前目录的 SDD 脚手架状态
-4. **工作流程指导** (`sdd-workflow` skill) - 提供 SDD 开发流程的逐步指导
+1. **初始化脚手架** (`/sdd-starter:init`) - 在当前目录初始化 SDD 脚手架
+2. **更新脚手架** (`/sdd-starter:update`) - 更新当前目录的 SDD 脚手架文件
+3. **升级插件** (`/sdd-starter:upgrade`) - 拉取 sdd-starter 最新代码并更新插件
+4. **检查状态** (`/sdd-starter:check`) - 检查当前目录的 SDD 脚手架状态
+5. **工作流程指导** (`sdd-workflow` skill) - 提供 SDD 开发流程的逐步指导
 
 ---
 
@@ -53,7 +54,7 @@ git clone https://github.com/spitmaster/sdd-starter.git
 cd my-project
 
 # 运行初始化命令
-/plugin run sdd-starter/sdd-init
+/sdd-starter:init
 
 # 按照提示操作
 # 1. 确认初始化
@@ -90,7 +91,7 @@ cp AGENTS.md.template AGENTS.md
 cd my-project
 
 # 运行更新命令
-/plugin run sdd-starter/sdd-update
+/sdd-starter:update
 
 # 按照提示操作
 # 1. 确认更新
@@ -113,7 +114,7 @@ cd my-project
 cd my-project
 
 # 运行检查命令
-/plugin run sdd-starter/sdd-check
+/sdd-starter:check
 
 # 输出示例：
 # === SDD 脚手架状态检查 ===
@@ -122,6 +123,36 @@ cd my-project
 # ✅ CODEBUDDY.md 存在
 # ...
 # 脚手架完整度：8/10
+```
+
+### 4. 升级插件
+
+拉取 sdd-starter 最新代码并更新插件：
+
+```bash
+# 升级 sdd-starter 插件到最新版本
+/sdd-starter:upgrade
+
+# 输出示例：
+# 正在拉取最新代码...
+# ✅ 代码拉取成功
+# ✅ 插件已更新到版本：1.1.0
+# 
+# 是否更新当前项目的 SDD 脚手架？(y/n) y
+# ✅ 脚手架已更新
+```
+
+**升级后的下一步**：
+
+```bash
+# 1. 检查插件状态
+/plugin list
+
+# 2. 检查脚手架状态（如果在项目中）
+/sdd-starter:check
+
+# 3. 查看更新日志
+cat .sdd-update.log
 ```
 
 ### 4. 使用工作流程 Skill
@@ -145,9 +176,10 @@ sdd-starter/
 ├── .codebuddy-plugin/          # 插件配置目录
 │   └── plugin.json             # 插件描述文件
 ├── commands/                   # 插件命令
-│   ├── sdd-init.md            # 初始化命令
-│   ├── sdd-update.md          # 更新命令
-│   └── sdd-check.md          # 检查命令
+│   ├── sdd-starter-init.md            # 初始化命令
+│   ├── sdd-starter-update.md          # 更新命令
+│   ├── sdd-starter-upgrade.md          # 升级命令
+│   └── sdd-starter-check.md          # 检查命令
 ├── skills/                     # 插件 skills
 │   └── sdd-workflow.md       # 工作流程指导
 ├── docs/                       # SDD 文档体系
@@ -167,13 +199,16 @@ sdd-starter/
 
 ```bash
 # 修改初始化命令
-edit commands/sdd-init.md
+edit commands/sdd-starter-init.md
 
 # 修改更新命令
-edit commands/sdd-update.md
+edit commands/sdd-starter-update.md
+
+# 修改升级命令
+edit commands/sdd-starter-upgrade.md
 
 # 修改检查命令
-edit commands/sdd-check.md
+edit commands/sdd-starter-check.md
 ```
 
 ### 2. 修改 Skill
@@ -206,7 +241,10 @@ edit skills/sdd-workflow.md
 /plugin install local /path/to/sdd-starter
 
 # 测试命令
-/plugin run sdd-starter/sdd-init
+/sdd-starter:init
+/sdd-starter:update
+/sdd-starter:upgrade
+/sdd-starter:check
 ```
 
 ---
@@ -224,7 +262,7 @@ A: 检查以下几点：
 
 A: 如果您的项目已经初始化过 SDD 脚手架，应该使用更新命令：
 ```bash
-/plugin run sdd-starter/sdd-update
+/sdd-starter:update
 ```
 
 ### Q: 更新时我的自定义配置会丢失吗？
@@ -237,6 +275,21 @@ A:
 ```bash
 /plugin uninstall sdd-starter
 ```
+
+### Q: 如何升级插件到最新版本？
+
+A: 使用升级命令：
+```bash
+/sdd-starter:upgrade
+```
+
+这会自动从 GitHub 拉取最新代码并更新插件。
+
+### Q: 升级时我的自定义配置会丢失吗？
+
+A: 不会。升级分为两部分：
+1. **插件本身升级** - 更新插件代码，不影响您的项目配置
+2. **脚手架文件更新**（可选）- 更新前会自动备份配置文件（`CODEBUDDY.md`、`AGENTS.md` 等），更新后会提示您手动合并。
 
 ---
 

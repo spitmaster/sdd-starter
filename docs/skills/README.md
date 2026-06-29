@@ -24,7 +24,7 @@
 
 AI 会自动从 GitHub 拉取脚手架并注入到当前项目。
 
-详见：[sdd-init.md](./sdd-init.md)
+详见：[sdd-starter-init.md](./sdd-starter-init.md)
 
 ---
 
@@ -61,7 +61,7 @@ AI 会自动从 GitHub 拉取脚手架并注入到当前项目。
 
 | Skill | 用途 | 触发词 |
 |-------|------|--------|
-| [sdd-init.md](./sdd-init.md) | ⭐ SDD 脚手架初始化 | `初始化 SDD 项目`、`注入脚手架` |
+| [sdd-starter-init.md](./sdd-starter-init.md) | ⭐ SDD 脚手架初始化 | `初始化 SDD 项目`、`注入脚手架` |
 
 ---
 
