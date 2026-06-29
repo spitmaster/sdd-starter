@@ -110,25 +110,53 @@ AI 启动时会**自动**扫描并整合这些文档。
 
 ## 🚀 快速开始
 
-### 1. 复制到项目
+### 方式 1: 使用插件（推荐）
 
-将 `docs/` 目录复制到你的项目根目录。
-
-### 2. 迁移老文档（如有）
-
-将项目历史文档复制到 `olddocs/` 目录。
-
-### 3. 初始化 AI 环境
+如果您使用 CodeBuddy，可以直接安装 `sdd-starter` 插件：
 
 ```bash
-> 请初始化 AI 环境
-# 或
-> 请查看 docs/AI配置指南.md
+# 1. 安装插件（首次）
+/plugin install sdd-starter
+
+# 2. 初始化脚手架
+/plugin run sdd-starter/sdd-init
+
+# 3. 更新脚手架（后续）
+/plugin run sdd-starter/sdd-update
+
+# 4. 检查状态
+/plugin run sdd-starter/sdd-check
 ```
 
-### 4. 开始开发
+### 方式 2: 手动复制
 
-根据你的情况选择场景 A/B/C/D。
+如果不使用插件，可以手动复制：
+
+```bash
+# 1. 复制 docs/ 目录
+cp -r sdd-starter/docs ./
+
+# 2. 复制 .codebuddy/ 目录
+cp -r sdd-starter/.codebuddy ./
+
+# 3. 复制模板文件
+cp sdd-starter/docs/ai-config/CODEBUDDY.md.template ./
+cp sdd-starter/docs/ai-config/for-codebuddy.md ./AGENTS.md.template
+```
+
+### 初始化 AI 环境
+
+```bash
+# 使用 CodeBuddy
+> 请初始化 AI 环境
+
+# 或手动查看文档
+> 请查看 docs/01-使用说明.md
+```
+
+### 开始开发
+
+根据你的情况选择场景 A/B/C/D（见上方「选择你的开发模式」）。
 
 ---
 

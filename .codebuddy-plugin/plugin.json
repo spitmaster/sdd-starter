@@ -1,0 +1,36 @@
+{
+  "name": "sdd-starter",
+  "description": "SDD (Specification-Driven Development) 脚手架插件 - 在当前目录初始化或更新 SDD 脚手架结构",
+  "version": "1.0.0",
+  "author": "SDD Community",
+  "homepage": {
+    "url": "https://github.com/spitmaster/sdd-starter",
+    "type": "git"
+  },
+  "license": "MIT",
+  "keywords": ["sdd", "scaffold", "specification", "workflow", "documentation"],
+  "commands": [
+    {
+      "name": "sdd-init",
+      "description": "在当前目录初始化 SDD 脚手架",
+      "file": "commands/sdd-init.md"
+    },
+    {
+      "name": "sdd-update",
+      "description": "更新当前目录的 SDD 脚手架到最新版本",
+      "file": "commands/sdd-update.md"
+    },
+    {
+      "name": "sdd-check",
+      "description": "检查当前目录的 SDD 脚手架状态",
+      "file": "commands/sdd-check.md"
+    }
+  ],
+  "skills": [
+    {
+      "name": "sdd-workflow",
+      "description": "SDD 工作流程指导",
+      "file": "skills/sdd-workflow.md"
+    }
+  ]
+}
