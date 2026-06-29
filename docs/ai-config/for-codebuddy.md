@@ -1,14 +1,19 @@
-# AGENTS.md
+# AGENTS.md - CodeBuddy Agents 配置
 
-> SDD 开发脚手架 - CodeBuddy Agents 配置
-> 本文件由 SDD 脚手架自动生成
+> SDD 开发脚手架 - CodeBuddy 自定义 Agent 定义
+> 本文件应复制到项目根目录并重命名为 `AGENTS.md`
 
 ---
+
+## 使用方法
+
+将此文件内容复制到项目根目录的 `AGENTS.md` 文件中，CodeBuddy 会自动加载这些 Agent 定义。
 
 ## 项目信息
 
 - **项目类型**: SDD 规范驱动开发项目
 - **脚手架**: SDD Scaffold v1.0
+- **配置文件**: 项目根目录 `AGENTS.md`
 
 ---
 

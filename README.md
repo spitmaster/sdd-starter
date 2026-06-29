@@ -146,14 +146,44 @@ AI 启动时会**自动**扫描并整合这些文档。
 
 ### 支持的工具
 
-| 工具 | 配置文件 |
-|------|----------|
-| Claude Code | `CLAUDE.md` |
-| Cursor | `.cursorrules` |
-| CodeBuddy | `AGENTS.md` |
-| GitHub Copilot | `.github/copilot-instructions.md` |
-| Antigravity | 配置文件 |
-| Qoder | 配置文件 |
+| 工具 | 配置文件 | 自动加载机制 |
+|------|----------|-------------|
+| Claude Code | `CLAUDE.md` | 项目根目录自动加载 |
+| Cursor | `.cursorrules` | 项目根目录自动加载 |
+| CodeBuddy | `CODEBUDDY.md` + `.codebuddy/rules/*.md` | 双重自动加载 |
+| GitHub Copilot | `.github/copilot-instructions.md` | 自动加载 |
+| Antigravity | 配置文件 | 自动加载 |
+| Qoder | 配置文件 | 自动加载 |
+
+#### CodeBuddy 自动加载机制（推荐）
+
+CodeBuddy 支持**双重自动加载**：
+
+1. **项目指令** - `CODEBUDDY.md`（项目根目录）
+   - 提供项目上下文和说明
+   - 优先级：项目根目录 > `.codebuddy/` > `~/.codebuddy/`
+
+2. **强制规则** - `.codebuddy/rules/*.md`
+   - 自动加载为 enforced rules（强制规则）
+   - 出现在系统提示的 `<always_applied_workspace_rules>` 部分
+   - 优先级最高，AI 必须遵守
+
+**使用方式**：
+
+```bash
+# 方式 1: 使用模板（推荐）
+cp docs/ai-config/CODEBUDDY.md.template CODEBUDDY.md
+# 然后编辑 CODEBUDDY.md，填入项目具体信息
+
+# 方式 2: 使用 Agent 定义（可选）
+cp docs/ai-config/for-codebuddy.md AGENTS.md
+# 然后在 CodeBuddy 中使用 @SDD-Architect 等触发词
+```
+
+**脚手架已包含**：
+- `.codebuddy/rules/sdd-workflow.md` - SDD 工作流程强制规则（自动加载）
+- `docs/ai-config/CODEBUDDY.md.template` - 项目指令模板（手动复制到项目根目录）
+- `docs/ai-config/for-codebuddy.md` - Agent 定义（手动复制到 `AGENTS.md`）
 
 ### 手动加载
 
