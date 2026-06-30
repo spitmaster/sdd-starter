@@ -1,0 +1,9 @@
+{
+  "name": "sdd-starter",
+  "version": "1.1.0",
+  "description": "SDD (Specification-Driven Development) 脚手架插件 - 在当前目录初始化或更新 SDD 脚手架结构",
+  "author": "SDD Community",
+  "homepage": "https://github.com/spitmaster/sdd-starter",
+  "license": "MIT",
+  "keywords": ["sdd", "scaffold", "specification", "workflow", "documentation"]
+}

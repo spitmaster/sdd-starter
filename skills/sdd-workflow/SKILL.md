@@ -1,3 +1,8 @@
+---
+name: sdd-workflow
+description: 提供 SDD 开发流程的逐步指导
+---
+
 # sdd-workflow - SDD 工作流程 Skill
 
 > 提供 SDD (Specification-Driven Development) 工作流程的逐步指导

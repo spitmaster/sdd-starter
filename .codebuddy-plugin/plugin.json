@@ -13,29 +13,29 @@
     {
       "name": "sdd-starter:init",
       "description": "在当前目录初始化 SDD 脚手架",
-      "file": "commands/sdd-starter-init.md"
+      "file": "commands/init.md"
     },
     {
       "name": "sdd-starter:update",
       "description": "更新当前目录的 SDD 脚手架文件",
-      "file": "commands/sdd-starter-update.md"
+      "file": "commands/update.md"
     },
     {
       "name": "sdd-starter:upgrade",
       "description": "拉取 sdd-starter 最新代码并更新插件",
-      "file": "commands/sdd-starter-upgrade.md"
+      "file": "commands/upgrade.md"
     },
     {
       "name": "sdd-starter:check",
       "description": "检查当前目录的 SDD 脚手架状态",
-      "file": "commands/sdd-starter-check.md"
+      "file": "commands/check.md"
     }
   ],
   "skills": [
     {
       "name": "sdd-workflow",
       "description": "SDD 工作流程指导",
-      "file": "skills/sdd-workflow.md"
+      "file": "skills/sdd-workflow/SKILL.md"
     }
   ]
 }

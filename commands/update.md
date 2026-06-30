@@ -1,3 +1,7 @@
+---
+description: 更新当前目录的 SDD 脚手架到最新版本
+---
+
 # sdd-starter:update - 更新 SDD 脚手架
 
 > 更新当前目录的 SDD 脚手架到最新版本

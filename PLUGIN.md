@@ -18,6 +18,8 @@
 
 ## 安装方法
 
+> 本插件同时支持 **CodeBuddy** 和 **Claude Code**——两者的插件命令格式一致，下列命令在任一工具的客户端里执行均可。
+
 ### 方式 1: 从插件市场安装（推荐）
 
 ```bash
@@ -173,15 +175,19 @@ cat .sdd-update.log
 
 ```
 sdd-starter/
-├── .codebuddy-plugin/          # 插件配置目录
+├── .claude-plugin/             # Claude Code 插件清单
+│   ├── marketplace.json        # marketplace 定义
 │   └── plugin.json             # 插件描述文件
-├── commands/                   # 插件命令
-│   ├── sdd-starter-init.md            # 初始化命令
-│   ├── sdd-starter-update.md          # 更新命令
-│   ├── sdd-starter-upgrade.md          # 升级命令
-│   └── sdd-starter-check.md          # 检查命令
+├── .codebuddy-plugin/          # CodeBuddy 插件清单
+│   └── plugin.json             # 插件描述文件
+├── commands/                   # 插件命令（两工具共用）
+│   ├── init.md                 # 初始化命令
+│   ├── update.md               # 更新命令
+│   ├── upgrade.md              # 升级命令
+│   └── check.md                # 检查命令
 ├── skills/                     # 插件 skills
-│   └── sdd-workflow.md       # 工作流程指导
+│   └── sdd-workflow/
+│       └── SKILL.md            # 工作流程指导
 ├── docs/                       # SDD 文档体系
 ├── .codebuddy/                 # CodeBuddy 配置
 └── README.md                   # 项目说明
@@ -199,16 +205,16 @@ sdd-starter/
 
 ```bash
 # 修改初始化命令
-edit commands/sdd-starter-init.md
+edit commands/init.md
 
 # 修改更新命令
-edit commands/sdd-starter-update.md
+edit commands/update.md
 
 # 修改升级命令
-edit commands/sdd-starter-upgrade.md
+edit commands/upgrade.md
 
 # 修改检查命令
-edit commands/sdd-starter-check.md
+edit commands/check.md
 ```
 
 ### 2. 修改 Skill
@@ -217,7 +223,7 @@ edit commands/sdd-starter-check.md
 
 ```bash
 # 修改工作流程指导
-edit skills/sdd-workflow.md
+edit skills/sdd-workflow/SKILL.md
 ```
 
 ### 3. 更新插件配置

@@ -1,3 +1,7 @@
+---
+description: 检查当前目录的 SDD 脚手架状态
+---
+
 # sdd-starter:check - 检查 SDD 脚手架状态
 
 > 检查当前目录的 SDD 脚手架状态，显示版本和配置信息

@@ -68,17 +68,7 @@ AI 启动时会**自动**扫描并整合这些文档。
 
 ### 核心文档
 
-| 文档 | 说明 |
-|------|------|
-| [docs/01-使用说明.md](./docs/01-使用说明.md) | 快速开始、核心规范 |
-| [docs/02-SDD方法论.md](./docs/02-SDD方法论.md) | SDD 核心概念 |
-| [docs/03-工作流程.md](./docs/03-工作流程.md) | 开发流程详解 |
-| [docs/04-AI工具指南.md](./docs/04-AI工具指南.md) | 各工具使用 |
-| [docs/05-最佳实践.md](./docs/05-最佳实践.md) | 常见问题 |
-| [docs/06-场景指南.md](./docs/06-场景指南.md) | 三种开发场景 |
-| [docs/07-小程序指南.md](./docs/07-小程序指南.md) | 小程序专项 |
-| [docs/08-项目诊断器.md](./docs/08-项目诊断器.md) | 自动诊断 |
-| [docs/olddocs-吸收指南.md](./docs/olddocs-吸收指南.md) | ⭐ olddocs 吸收流程 |
+> 📂 完整文档都在 [`docs/`](./docs/) 目录，**直接浏览目录即可了解有哪些规范与指南**——文档会随时增减，这里不再逐一罗列，以免与实际文件失配。新手从 [docs/01-使用说明.md](./docs/01-使用说明.md) 起步。
 
 ### AI 配置
 
@@ -224,48 +214,16 @@ cp docs/ai-config/for-codebuddy.md AGENTS.md
 
 ---
 
-## 📁 完整目录结构
+## 📁 目录结构
 
 ```
-sdd-scaffold/
-├── README.md                    # 本文档（唯一入口）
-├── olddocs/                     # ⭐ 历史文档目录
-├── docs/
-│   ├── commands/                # ⭐ Claude Code 命令
-│   │   ├── README.md
-│   │   └── sdd-starter.md
-│   ├── README.md             # 迁移说明
-│   ├── 需求文档/
-│   ├── 技术设计/
-│   ├── API文档/
-│   ├── 项目笔记.md
-│   └── 术语表.md
-└── docs/                        # 所有内容在此
-    ├── README.md               # AI 配置说明
-    ├── AI配置指南.md           # ⭐ AI 初始化流程（含 olddocs 吸收）
-    ├── olddocs-吸收指南.md     # ⭐ 吸收流程详解
-    ├── 01-使用说明.md
-    ├── 02-SDD方法论.md
-    ├── 03-工作流程.md
-    ├── 04-AI工具指南.md
-    ├── 05-最佳实践.md
-    ├── 06-场景指南.md
-    ├── 07-小程序指南.md
-    ├── 08-项目诊断器.md
-    ├── ai-config/               # AI 工具配置
-    │   ├── for-claude.md
-    │   ├── for-cursor.md
-    │   ├── for-codebuddy.md
-    │   ├── for-copilot.md
-    │   ├── for-antigravity.md
-    │   └── for-qoder.md
-    ├── templates/               # 模板文件
-    ├── prompts/                 # AI 提示词
-    ├── scripts/                 # 自动化脚本
-    ├── skills/                  # 可复用 skill
-    ├── agents/                  # Agent 定义
-    └── example/                 # 示例
+sdd-starter/
+├── README.md      # 本文档（唯一入口）
+├── olddocs/       # 历史文档目录（迁移用，可选）
+└── docs/          # 所有规范、指南、配置、模板、脚本、skill、agent
 ```
+
+> 详细内容**直接浏览 [`docs/`](./docs/) 目录**即可——文档会随时增减，这里不再逐一罗列，以免与实际文件失配。
 
 ---
 

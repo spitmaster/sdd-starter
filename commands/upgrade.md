@@ -1,3 +1,7 @@
+---
+description: 拉取 sdd-starter 最新代码并更新插件到最新版本
+---
+
 # sdd-starter:upgrade - 升级 sdd-starter 插件
 
 > 拉取 sdd-starter 最新代码并更新插件到最新版本

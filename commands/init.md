@@ -1,3 +1,7 @@
+---
+description: 在当前目录初始化 SDD 脚手架
+---
+
 # sdd-starter:init - 初始化 SDD 脚手架
 
 > 在当前目录初始化 SDD (Specification-Driven Development) 脚手架
