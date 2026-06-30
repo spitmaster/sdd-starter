@@ -1,12 +1,16 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "sdd-starter",
-  "version": "1.1.0",
+  "owner": {
+    "name": "spitmaster",
+    "url": "https://github.com/spitmaster"
+  },
   "plugins": [
     {
       "name": "sdd-starter",
+      "source": "./",
       "description": "SDD 脚手架初始化和管理插件",
-      "source": "./"
+      "version": "1.1.0"
     }
   ]
 }
